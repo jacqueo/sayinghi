@@ -5,7 +5,7 @@ import pandas as pd
 loansData = pd.read_csv('https://github.com/Thinkful-Ed/curric-data-001-data-sets/raw/master/loans/loansData.csv')
 
 # first 5 rows of data, see what we're working with.
-loansData['Interest.Rates'][0:5]
+loansData['Interest.Rate'][0:5]
 loansData['Loan.Length'][0:5]
 loansData['FICO.Range'][0:5]
 
@@ -62,4 +62,7 @@ f = model.fit()
 
 # view results summary:
 f.summary()
+
+loansData.to_csv('loansData_clean.csv', header=True, index=False)
+
 
